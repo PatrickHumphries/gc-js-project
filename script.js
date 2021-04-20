@@ -59,10 +59,12 @@
       entertainmentSum += Number(itemCost);
       entertainmentTotal.innerText = `Weekly total: $${entertainmentSum}`;
     }
+
+    if (remainderVar < 0) {
+        alert("Warning! You have overspent your budget!");
+        budgetRemainderDisplay.style.color = "red";
+    }
   });
 
-  if (Number(budgetRemainderDisplay) < 0) {
-      alert("You have spent your entire budget!");
-      budgetRemainderDisplay.style.color = "red";
-  }
+  
 }
