@@ -19,12 +19,9 @@
       let itemCost = document.getElementById("itemCost").value;
       let itemCategory = document.getElementById("categories").value;
       
-<<<<<<< Updated upstream
+
       remainderVar -= itemCost
       console.log(remainderVar)
       budgetRemainderDisplay.innerText = `$${remainderVar}`;
-=======
-      remainderVar -= itemCost;
->>>>>>> Stashed changes
   })
 }
