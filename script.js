@@ -1,6 +1,6 @@
 "use strict";
 {
-  //let totalBudget = prompt("What is your weekly budget?");
+  let totalBudget = prompt("What is your weekly budget?");
   const budgetTotalDisplay = document.getElementById("totalBudget");
   budgetTotalDisplay.innerText = `$${totalBudget}`;
   const budgetRemainderDisplay = document.getElementById("remaining");
@@ -42,4 +42,9 @@
         billsTotal.innerText = `Weekly total: $${billSum}`
     }
   });
+
+  if (Number(budgetRemainderDisplay) < 0) {
+      alert("You have spent your entire budget!");
+      budgetRemainderDisplay.style.color = "red";
+  }
 }
