@@ -19,17 +19,19 @@
             <span id="remaining">Remaining here</span>
         </form>
         <form id="inputForm" action="">
+            <label id="expenses">Expenses: </label>
             <label id="itemTag" for="itemInput">Item name:</label>
             <input id="itemInput" type="text" />
             <label id="costTag" for="itemCost">Item cost:</label>
             <input id="itemCost" type="number" min="0" />
             <select name="categories" id="categories" >
-                <option value= "" disabled selected>Category</option>
+                <option value="disabled">Category</option>
                 <option value="bills">Bills</option>
                 <option value="food">Food</option>
                 <option value="clothing">Clothing</option>
                 <option value="entertainment">Entertainment</option>
             </select>
+            <input id="subtractBtn" type="button" value="Subtract" />
         </form>
     </div>
     <section>

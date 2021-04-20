@@ -14,7 +14,12 @@ h1 {
     text-align: center;
 }
 
-#budgetTag, #remainingTag, #itemTag, #costTag {
+#expenses {
+    font-size: 1.5em;
+    text-align: left;
+}
+
+#budgetTag, #remainingTag, #itemTag, #costTag, #expenses {
     color: chartreuse;
 }
 
@@ -32,10 +37,11 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: start;
-    width: 250px;
+    width: 240px;
     margin: 15px;
     padding: 10px;
     background-color: rgb(47, 47, 47);
+    justify-content: center;
 }
 
 #inputForm {
@@ -45,6 +51,7 @@ h1 {
     width: 250px;
     margin: 10px;
     background-color:  rgb(47, 47, 47);
+    justify-content: center;
 }
 
 #budgetForm label {
@@ -54,6 +61,12 @@ h1 {
 
 #inputForm label, select {
     margin: 10px;
+}
+
+#subtractBtn {
+    padding: 2px;
+    margin: 0;
+
 }
 
 section {
