@@ -12,6 +12,7 @@ h1 {
     background-color: rgb(47, 47, 47);
     width: 100%;
     text-align: center;
+    border-radius: 20px;
 }
 
 #expenses {
@@ -37,11 +38,12 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: start;
-    width: 240px;
+    width: 260px;
     margin: 15px;
     padding: 10px;
     background-color: rgb(47, 47, 47);
     justify-content: center;
+    border-radius: 20px;
 }
 
 #inputForm {
@@ -52,6 +54,7 @@ h1 {
     margin: 10px;
     background-color:  rgb(47, 47, 47);
     justify-content: center;
+    border-radius: 20px;;
 }
 
 #budgetForm label {
@@ -66,7 +69,6 @@ h1 {
 #subtractBtn {
     padding: 2px;
     margin: 0;
-
 }
 
 section {
@@ -87,7 +89,8 @@ div {
 
 #bills, #food, #clothing, #entertainment {
     border: 2px solid white;
-    padding: 5px;
+    padding: 12px;
+    border-radius: 20px;
 }
 
 .totals {
@@ -100,6 +103,8 @@ section div h2 {
     color: white;
     background-color: rgb(47, 47, 47);
     margin: 0;
+    border-radius: 10px;
+    padding: 5px;
 }
 
 #billTotal, #foodTotal, #clothingTotal, #entertainmentTotal {
