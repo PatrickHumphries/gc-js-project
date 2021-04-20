@@ -24,6 +24,8 @@ h1 {
 
 #formContainer {
     display: flex;
+    justify-content: center;
+    width: 100vw;
 }
 
 #budgetForm {
@@ -32,6 +34,8 @@ h1 {
     align-items: start;
     width: 250px;
     margin: 15px;
+    padding: 10px;
+    background-color: rgb(47, 47, 47);
 }
 
 #inputForm {
@@ -40,6 +44,7 @@ h1 {
     align-items: center;
     width: 250px;
     margin: 10px;
+    background-color:  rgb(47, 47, 47);
 }
 
 #budgetForm label {
@@ -57,19 +62,34 @@ section {
     justify-content: space-between;
     align-items: center;
     margin: 10px;
+    width: 100vw;
 }
 
 div {
     position: relative;
     height: 300px;
-    box-sizing: border-box;
-    margin: 20px;;
+    width: 25%;
+    margin: 20px;
+}
+
+#bills, #food, #clothing, #entertainment {
+    border: 2px solid white;
+    padding: 5px;
 }
 
 .totals {
     position: absolute;
     bottom: 0px;
     align-items: flex-end;
+}
+
+section div h2 {
+    color: white;
+    background-color: rgb(47, 47, 47);
+}
+
+#billTotal, #foodTotal, #clothingTotal, #entertainmentTotal {
+    color: chartreuse;
 }
 
 
