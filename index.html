@@ -10,10 +10,23 @@
 <body>
     <h1>Budget Buddy</h1>
     <form action="">
-        <label for="budget">Budget Amount: </label>
+        <label for="budget">Budget: </label>
         <input id="budget" type="text" />
-        <label for="remaining">Current Budget: </label>
+        <label for="remaining">Remaining: </label>
         <span id="remaining">Remaining here</span>
+    </form>
+    <form action="">
+        <label for="itemInput">Item purchased:</label>
+        <input id="itemInput" type="text" />
+        <label for="itemCost">Total cost:</label>
+        <input id="itemCost" type="number" min="0" />
+        <select name="categories" id="categories" >
+            <option value="disabled">Category</option>
+            <option value="bills">Bills</option>
+            <option value="food">Food</option>
+            <option value="clothing">Clothing</option>
+            <option value="entertainment">Entertainment</option>
+        </select>
     </form>
     <section>
         <div id="bills">
