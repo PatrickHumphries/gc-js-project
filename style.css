@@ -22,8 +22,20 @@ section {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin: 10px;
 }
 
-#remaining {
-
+div {
+    position: relative;
+    height: 300px;
+    box-sizing: border-box;
+    margin: 20px;;
 }
+
+.totals {
+    position: absolute;
+    bottom: 0px;
+    align-items: flex-end;
+}
+
+
