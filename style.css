@@ -26,6 +26,7 @@ h1 {
 
 #totalBudget, #remaining {
     color: white;
+    font-size: 1.7em;
 }
 
 #formContainer {
@@ -43,6 +44,7 @@ h1 {
     padding: 10px;
     background-color: rgb(47, 47, 47);
     justify-content: center;
+    align-items: center;
     border-radius: 20px;
 }
 
@@ -68,21 +70,23 @@ h1 {
 
 #subtractBtn {
     padding: 2px;
-    margin: 0;
+    margin-bottom: 5px;
+}
+
+#subtractBtn:hover {
+    background-color: chartreuse;
 }
 
 section {
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     justify-content: space-between;
-    align-items: center;
     margin: 10px;
     width: 90vw;
 }
 
 div {
     position: relative;
-    height: 300px;
     width: 25%;
     margin: 20px;
 }
@@ -91,6 +95,8 @@ div {
     border: 2px solid white;
     padding: 12px;
     border-radius: 20px;
+    min-height: 300px;
+    align-items: start;
 }
 
 .totals {
