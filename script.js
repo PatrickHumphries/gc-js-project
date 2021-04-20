@@ -60,4 +60,9 @@
       entertainmentTotal.innerText = `Weekly total: $${entertainmentSum}`;
     }
   });
+
+  if (Number(budgetRemainderDisplay) < 0) {
+      alert("You have spent your entire budget!");
+      budgetRemainderDisplay.style.color = "red";
+  }
 }
