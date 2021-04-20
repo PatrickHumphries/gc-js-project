@@ -21,7 +21,6 @@
       
 
       remainderVar -= itemCost
-      console.log(remainderVar)
       budgetRemainderDisplay.innerText = `$${remainderVar}`;
   })
 }
