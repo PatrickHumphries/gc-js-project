@@ -20,5 +20,7 @@
       let itemCategory = document.getElementById("categories").value;
       
       remainderVar -= itemCost
+      console.log(remainderVar)
+      budgetRemainderDisplay.innerText = `$${remainderVar}`;
   })
 }
