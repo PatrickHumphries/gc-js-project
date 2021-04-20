@@ -5,21 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <title>Budget Buddy</title>
 </head>
 <body>
     <h1>Budget Buddy</h1>
     <div id="formContainer">
         <form id="budgetForm" action="">
-            <label for="budget">Budget: </label>
+            <label id="budgetTag" for="budget">Budget: </label>
             <span id="totalBudget">total budget here</span>
-            <label for="remaining">Remaining: </label>
+            <label id="remainingTag" for="remaining">Remaining: </label>
             <span id="remaining">Remaining here</span>
         </form>
         <form id="inputForm" action="">
-            <label for="itemInput">Item name:</label>
+            <label id="itemTag" for="itemInput">Item name:</label>
             <input id="itemInput" type="text" />
-            <label for="itemCost">Item cost:</label>
+            <label id="costTag" for="itemCost">Item cost:</label>
             <input id="itemCost" type="number" min="0" />
             <select name="categories" id="categories" >
                 <option value="disabled">Category</option>
