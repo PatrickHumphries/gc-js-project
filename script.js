@@ -24,6 +24,11 @@
     remainderVar -= itemCost;
     budgetRemainderDisplay.innerText = `$${remainderVar}`;
 
+<<<<<<< HEAD
+      remainderVar -= itemCost
+      budgetRemainderDisplay.innerText = `$${remainderVar}`;
+  })
+=======
     const billList = document.getElementById("billList");
     const foodList = document.getElementById("foodList");
     const clothingList = document.getElementById("clothingList");
@@ -42,4 +47,5 @@
         billsTotal.innerText = `Weekly total: $${billSum}`
     }
   });
+>>>>>>> c6d2d9c72abad12dab62f94578dd514279f0535f
 }
