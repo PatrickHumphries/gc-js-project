@@ -1,14 +1,11 @@
-#div {
-    background-color: blueviolet;
-    border-radius: 50%;
-    height: 100px;
-    width: 100px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-<<<<<<< HEAD
-    border: 3px dashed black;
-=======
-    border: 5px, solid, yellow;
->>>>>>> 8e13ec2eb7a77020dd563337eae873a50de45d19
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
 }
