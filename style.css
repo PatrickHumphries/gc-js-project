@@ -75,7 +75,7 @@ section {
     justify-content: space-between;
     align-items: center;
     margin: 10px;
-    width: 100vw;
+    width: 90vw;
 }
 
 div {
@@ -99,10 +99,21 @@ div {
 section div h2 {
     color: white;
     background-color: rgb(47, 47, 47);
+    margin: 0;
 }
 
 #billTotal, #foodTotal, #clothingTotal, #entertainmentTotal {
-    color: chartreuse;
+    color: white;
 }
+
+@media only screen and (max-width: 1200px) {
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+    div {
+        width: 50%;
+    }
+  }
 
 
