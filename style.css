@@ -13,38 +13,66 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
   font-size: 3em;
   color: chartreuse;
-  background-color: rgba(37, 37, 37, 0.8);
-  width: 80%;
+  background-color:  rgba(26, 26, 26, 0.8);
+  width: 60%;
   text-align: center;
   border-radius: 20px;
-  margin: 0 auto;
+  border: 1px solid white;
 }
 
 nav {
   display: none;
   flex-direction: column;
   align-items: center;
-  width: 350px;
+  width: 40%;
   box-sizing: border-box;
-  background-color: rgba(37, 37, 37, 0.8);
+  /* background-color:  rgba(55, 56, 56, 0.9); */
+  background-color:  rgba(23, 23, 23, 0.9);
   border: 2px solid white;
   border-radius: 20px;
   padding: 20px;
-  margin-left: 20px;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  /* top: 4%;
+  left: 23%; */
   position: absolute;
   z-index: 1;
 }
 
+#settingsForm {
+    width: 100%;
+}
+
 #accessNav {
-    top: 0;
+    margin: 20px;
     font-size: 2em;
     color: chartreuse;
+}
+
+#p1 {
+    color: chartreuse;
+    font-size: 2em;
+}
+
+#p2 {
+    font-size: .7em;
+    color: white;
+    text-decoration: underline;
 }
 
 #budgetAmount {
@@ -73,7 +101,7 @@ nav {
   border-radius: 50%;
   height: 150px;
   width: 150px;
-  margin: 10px auto;
+  margin: 20px auto;
 }
 
 #newWeek {
@@ -126,10 +154,11 @@ nav {
   width: 35%;
   height: 350px;
   margin: 10px;
-  background-color: rgba(37, 37, 37, 0.8);
+  background-color:  rgba(26, 26, 26, 0.8);
   justify-content: center;
   align-items: center;
   border-radius: 20px;
+  border: 1px solid white;
 }
 
 #inputForm {
@@ -139,9 +168,10 @@ nav {
   width: 35%;
   height: 350px;
   margin: 10px;
-  background-color: rgba(37, 37, 37, 0.8);
+  background-color: rgba(26, 26, 26, 0.8);
   justify-content: center;
   border-radius: 20px;
+  border: 1px solid white;
 }
 
 #budgetForm label {

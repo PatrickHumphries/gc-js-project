@@ -1,12 +1,23 @@
 "use strict";
 {
-  let totalBudget = prompt("What is your weekly budget?");
-  const budgetTotalDisplay = document.getElementById("totalBudget");
-  budgetTotalDisplay.innerText = `$${totalBudget}`;
-  const budgetRemainderDisplay = document.getElementById("remaining");
-  // budget remaining display, need var still for
-  let remainderVar = totalBudget;
-  budgetRemainderDisplay.innerText = `$${remainderVar}`;
+//   let totalBudget = prompt("What is your weekly budget?");
+
+
+const budgetTotalDisplay = document.getElementById("totalBudget");
+const budgetRemainderDisplay = document.getElementById("remaining");
+let newWeek = document.getElementById("newWeek");
+let remainderVar = totalBudget; 
+
+newWeek.addEventListener('click', (event) => {
+    let totalBudget = document.getElementById("budgetAmount").value;
+    budgetTotalDisplay.innerText = `$${totalBudget}`;
+    budgetRemainderDisplay.innerText = `$${remainderVar}`;
+    remainderVar -= itemCost;
+})
+
+  
+  
+  
 
   // value of inputs
   const budgetInput = document.getElementById("subtractBtn");
