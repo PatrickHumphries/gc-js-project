@@ -8,7 +8,7 @@
     let totalBudget = Number(document.getElementById("budgetAmount").value);
     budgetTotalDisplay.innerText = `$${totalBudget}`;
     // let remainderVar = totalBudget;
-    budgetRemainderDisplay.innerText = `$${totalBudget}`;
+    budgetRemainderDisplay.innerText = `$${totalBudget.toFixed(2)}`;
     event.preventDefault();
     let remainderVar = totalBudget;
 
@@ -29,7 +29,7 @@
       let itemCategory = document.getElementById("categories").value;
 
       remainderVar -= itemCost;
-      budgetRemainderDisplay.innerText = `$${remainderVar}`;
+      budgetRemainderDisplay.innerText = `$${remainderVar.toFixed(2)}`;
 
       const billList = document.getElementById("billList");
       const foodList = document.getElementById("foodList");
@@ -37,32 +37,32 @@
       const entertainmentList = document.getElementById("entertainmentList");
 
       let listItem = document.createElement("li");
-      listItem.innerText = `${itemName}: $${itemCost}`;
+      listItem.innerText = `${itemName}: $${itemCost.toFixed(2)}`;
 
       if (itemCategory === "bills") {
         billList.appendChild(listItem);
         let billsTotal = document.getElementById("billTotal");
 
         billSum += Number(itemCost);
-        billsTotal.innerText = `Weekly total: $${billSum}`;
+        billsTotal.innerText = `Weekly total: $${billSum.toFixed(2)}`;
       } else if (itemCategory === "food") {
         foodList.appendChild(listItem);
         let foodTotal = document.getElementById("foodTotal");
 
         foodSum += Number(itemCost);
-        foodTotal.innerText = `Weekly total: $${foodSum}`;
+        foodTotal.innerText = `Weekly total: $${foodSum.toFixed(2)}`;
       } else if (itemCategory === "clothing") {
         clothingList.appendChild(listItem);
         let clothingTotal = document.getElementById("clothingTotal");
 
         clothingSum += Number(itemCost);
-        clothingTotal.innerText = `Weekly total: $${clothingSum}`;
+        clothingTotal.innerText = `Weekly total: $${clothingSum.toFixed(2)}`;
       } else if (itemCategory === "entertainment") {
         entertainmentList.appendChild(listItem);
         let entertainmentTotal = document.getElementById("entertainmentTotal");
 
         entertainmentSum += Number(itemCost);
-        entertainmentTotal.innerText = `Weekly total: $${entertainmentSum}`;
+        entertainmentTotal.innerText = `Weekly total: $${entertainmentSum.toFixed(2)}`;
       }
 
       if (remainderVar < 0) {
@@ -73,7 +73,6 @@
 
   });
   let navBtn = document.getElementById("accessNav");
-  let nav = document.getElementById("nav");
   navBtn.addEventListener("click", function (e) {
     if (document.getElementById("nav").style.display === "none") {
       document.getElementById("nav").style.display = "flex";
