@@ -31,7 +31,7 @@ header {
 h1 {
   font-size: 3em;
   color: chartreuse;
-  background-color:  rgba(26, 26, 26, 0.8);
+  background-color: rgba(26, 26, 26, 0.8);
   width: 60%;
   text-align: center;
   border-radius: 20px;
@@ -46,7 +46,7 @@ nav {
   max-width: 360px;
   box-sizing: border-box;
   /* background-color:  rgba(55, 56, 56, 0.9); */
-  background-color:  rgba(23, 23, 23, 1);
+  background-color: rgba(23, 23, 23, 1);
   border: 2px solid white;
   border-radius: 20px;
   padding: 20px;
@@ -60,24 +60,24 @@ nav {
 }
 
 #settingsForm {
-    width: 100%;
+  width: 100%;
 }
 
 #accessNav {
-    margin: 20px;
-    font-size: 2em;
-    color: chartreuse;
+  margin: 20px;
+  font-size: 2em;
+  color: chartreuse;
 }
 
 #p1 {
-    color: chartreuse;
-    font-size: 2em;
+  color: chartreuse;
+  font-size: 2em;
 }
 
 #p2 {
-    font-size: .7em;
-    color: white;
-    text-decoration: underline;
+  font-size: 0.7em;
+  color: white;
+  text-decoration: underline;
 }
 
 #budgetAmount {
@@ -161,7 +161,7 @@ nav {
   max-width: 580px;
   height: 350px;
   margin: 10px;
-  background-color:  rgba(26, 26, 26, 0.8);
+  background-color: rgba(26, 26, 26, 0.8);
   justify-content: center;
   align-items: center;
   border-radius: 20px;
@@ -253,19 +253,32 @@ li {
 }
 
 @media only screen and (max-width: 1200px) {
+    body {
+        padding: 0;
+    }
   section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
+    width: 100%;
   }
   #formContainer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-width: 150px;
   }
-
-  div {
-    width: 50%;
+  #bills,
+  #food,
+  #clothing,
+  #entertainment,
+  #budgetForm,
+  #inputForm {
+      width: 90%;
+      overflow-x: hidden;
+  }
+  #nav {
+      width: 60%;
   }
 }

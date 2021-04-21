@@ -6,6 +6,7 @@
   let newWeek = document.getElementById("newWeek");
 
   newWeek.addEventListener("click", (event) => {
+    nav.style.display = "none";
     let totalBudget = Number(document.getElementById("budgetAmount").value);
     budgetTotalDisplay.innerText = `$${totalBudget}`;
     budgetRemainderDisplay.innerText = `$${totalBudget.toFixed(2)}`;
@@ -22,7 +23,7 @@
     let entertainmentSum = 0;
 
     budgetInput.addEventListener("click", (event) => {
-      event.preventDefault();
+    //   event.preventDefault();
 
       let itemName = document.getElementById("itemInput").value;
       let itemCost = Number(document.getElementById("itemCost").value);
