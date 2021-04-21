@@ -6,11 +6,10 @@
   let newWeek = document.getElementById("newWeek");
 
   newWeek.addEventListener("click", (event) => {
-    nav.style.display = "none";
     let totalBudget = Number(document.getElementById("budgetAmount").value);
     budgetTotalDisplay.innerText = `$${totalBudget}`;
     budgetRemainderDisplay.innerText = `$${totalBudget.toFixed(2)}`;
-    event.preventDefault();
+    // event.preventDefault();
     let remainderVar = totalBudget;
 
     
