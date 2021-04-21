@@ -17,6 +17,52 @@ h1 {
     border-radius: 20px;
 }
 
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    box-sizing: border-box;
+    background-color: rgba(26, 26, 26, 0.7);
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+#budgetAmount {
+    width: 100%;
+}
+
+#btnContainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+#warnings, #darkMode {
+    justify-content: baseline;
+    align-items: center;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    width: 100%;
+}
+
+#pieChart {
+    background-color: rgb(1, 177, 177);
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+
+#newWeek {
+    width: 100%;
+}
+
+#newWeek:hover, #darkMode:hover {
+    background-color: chartreuse;
+}
+
 #expenses {
     font-size: 2em;
 }
@@ -50,7 +96,6 @@ h1 {
 #budgetForm {
     display: flex;
     flex-direction: column;
-    align-items: start;
     width: 35%;
     height: 350px;
     margin: 10px;
