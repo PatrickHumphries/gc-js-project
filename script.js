@@ -1,6 +1,6 @@
 "use strict";
 {
-  let totalBudget = p1rompt("What is your weekly budget?");
+  let totalBudget = prompt("What is your weekly budget?");
   const budgetTotalDisplay = document.getElementById("totalBudget");
   budgetTotalDisplay.innerText = `$${totalBudget}`;
   const budgetRemainderDisplay = document.getElementById("remaining");
@@ -61,10 +61,21 @@
     }
 
     if (remainderVar < 0) {
-        alert("Warning! You have overspent your budget!");
-        budgetRemainderDisplay.style.color = "red";
+      alert("Warning! You have overspent your budget!");
+      budgetRemainderDisplay.style.color = "red";
     }
   });
 
-  
+  //might not be best practices for getting nav to appear
+  let navBtn = document.getElementById("accessNav");
+  let nav = document.getElementById("nav");
+
+  navBtn.addEventListener("click", function (e) {
+    if (document.getElementById("nav").style.display === "none") {
+      document.getElementById("nav").style.display = "flex";
+    } else {
+      document.getElementById("nav").style.display = "none";
+    }
+    e.preventDefault();
+  });
 }
