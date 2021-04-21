@@ -1,147 +1,256 @@
+html {
+  background: url("imgs/bgMtn.jpg");
+  overflow-x: hidden;
+}
+
 body {
-    font-family: Noto Sans KR;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(46, 46, 46);
-    /* background: url("imgs/bg.jpg");
-    background-size: cover; */
+  font-family: Noto Sans KR;
+}
+
+.bodyCon {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
-    font-size: 3em;
+  font-size: 3em;
+  color: chartreuse;
+  background-color:  rgba(26, 26, 26, 0.8);
+  width: 60%;
+  text-align: center;
+  border-radius: 20px;
+  border: 1px solid white;
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  box-sizing: border-box;
+  /* background-color:  rgba(55, 56, 56, 0.9); */
+  background-color:  rgba(23, 23, 23, 1);
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  /* top: 4%;
+  left: 23%; */
+  position: absolute;
+  z-index: 1;
+}
+
+#settingsForm {
+    width: 100%;
+}
+
+#accessNav {
+    margin: 20px;
+    font-size: 2em;
     color: chartreuse;
-    background-color: rgba(26, 26, 26, 0.8);
-    width: 80%;
-    text-align: center;
-    border-radius: 20px;
+}
+
+#p1 {
+    color: chartreuse;
+    font-size: 2em;
+}
+
+#p2 {
+    font-size: .7em;
+    color: white;
+    text-decoration: underline;
+}
+
+#budgetAmount {
+  width: 100%;
+}
+
+#btnContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 5px 0;
+}
+
+#warnings,
+#darkMode {
+  justify-content: baseline;
+  align-items: center;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+  width: 100%;
+}
+
+#pieChart {
+  background-color: rgb(1, 177, 177);
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  margin: 20px auto;
+}
+
+#newWeek {
+  width: 100%;
+}
+
+#newWeek:hover,
+#darkMode:hover {
+  background-color: chartreuse;
 }
 
 #expenses {
-    font-size: 2em;
+  font-size: 2em;
 }
 
-#itemTag, #costTag {
-    font-size: 1.5em;
+#itemTag,
+#costTag {
+  font-size: 1.5em;
 }
 
-#budgetTag, #remainingTag {
-    font-size: 2em;
+#budgetTag,
+#remainingTag {
+  font-size: 2em;
 }
 
-#budgetTag, #remainingTag, #itemTag, #costTag, #expenses {
-    color: chartreuse;
+#budgetTag,
+#remainingTag,
+#itemTag,
+#costTag,
+#expenses {
+  color: chartreuse;
 }
 
-
-
-#totalBudget, #remaining {
-    color: white;
-    font-size: 3em;
-
+#totalBudget,
+#remaining {
+  color: white;
+  font-size: 3em;
 }
 
 #formContainer {
-    display: flex;
-    justify-content: center;
-    width: 100vw;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  width: 100vw;
+  min-width: 35%;
 }
 
 #budgetForm {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    width: 35%;
-    height: 350px;
-    margin: 10px;
-    background-color: rgba(26, 26, 26, 0.8);
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  height: 350px;
+  margin: 10px;
+  background-color:  rgba(26, 26, 26, 0.8);
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid white;
 }
 
 #inputForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 35%;
-    height: 350px;
-    margin: 10px;
-    background-color:  rgba(26, 26, 26, 0.8);
-    justify-content: center;
-    border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35%;
+  height: 350px;
+  margin: 10px;
+  background-color: rgba(26, 26, 26, 0.8);
+  justify-content: center;
+  border-radius: 20px;
+  border: 1px solid white;
 }
 
 #budgetForm label {
-    font-size: 1.7em;
-    margin: 10px;
+  font-size: 1.7em;
+  margin: 10px;
 }
 
-#inputForm label, select {
-    margin: 10px;
+#inputForm label,
+select {
+  margin: 10px;
 }
 
 #subtractBtn {
-    padding: 2px;
-    margin-bottom: 5px;
+  padding: 2px;
+  margin-bottom: 5px;
 }
 
 #subtractBtn:hover {
-    background-color: chartreuse;
+  background-color: chartreuse;
 }
 
 section {
-    display: flex;
-    justify-content: space-between;
-    margin: 10px;
-    width: 90vw;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 div {
-    position: relative;
-    width: 25%;
-    margin: 20px;
+  position: relative;
+  width: 25%;
+  margin: 20px;
 }
 
-#bills, #food, #clothing, #entertainment {
-    border: 2px solid white;
-    padding: 12px;
-    border-radius: 20px;
-    min-height: 300px;
-    align-items: start;
+#bills,
+#food,
+#clothing,
+#entertainment {
+  border: 2px solid white;
+  padding: 12px;
+  border-radius: 20px;
+  min-height: 300px;
+  align-items: start;
 }
 
 .totals {
-    position: absolute;
-    bottom: 0px;
-    align-items: flex-end;
+  position: absolute;
+  bottom: 0px;
+  align-items: flex-end;
 }
 
 section div h2 {
-    color: white;
-    background-color: rgba(26, 26, 26, 0.8);
-    margin: 0;
-    border-radius: 10px;
-    padding: 5px;
+  color: white;
+  background-color: rgba(26, 26, 26, 0.8);
+  margin: 0;
+  border-radius: 10px;
+  padding: 5px;
 }
 
-#billTotal, #foodTotal, #clothingTotal, #entertainmentTotal {
-    color: white;
+#billTotal,
+#foodTotal,
+#clothingTotal,
+#entertainmentTotal {
+  color: white;
 }
 
 li {
-    color: white;
+  color: white;
 }
 
 @media only screen and (max-width: 1200px) {
-    section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    div {
-        width: 50%;
-    }
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-
-
+  div {
+    width: 50%;
+  }
+}

@@ -1,70 +1,85 @@
 "use strict";
 {
-  let totalBudget = prompt("What is your weekly budget?");
   const budgetTotalDisplay = document.getElementById("totalBudget");
-  budgetTotalDisplay.innerText = `$${totalBudget}`;
   const budgetRemainderDisplay = document.getElementById("remaining");
-  // budget remaining display, need var still for
-  let remainderVar = totalBudget;
-  budgetRemainderDisplay.innerText = `$${remainderVar}`;
+  let newWeek = document.getElementById("newWeek");
 
-  // value of inputs
-  const budgetInput = document.getElementById("subtractBtn");
-
-  let billSum = 0;
-  let foodSum = 0;
-  let clothingSum = 0;
-  let entertainmentSum = 0;
-
-  budgetInput.addEventListener("click", (event) => {
+  newWeek.addEventListener("click", (event) => {
+    let totalBudget = Number(document.getElementById("budgetAmount").value);
+    budgetTotalDisplay.innerText = `$${totalBudget}`;
+    // let remainderVar = totalBudget;
+    budgetRemainderDisplay.innerText = `$${totalBudget}`;
     event.preventDefault();
+    let remainderVar = totalBudget;
 
-    let itemName = document.getElementById("itemInput").value;
-    let itemCost = document.getElementById("itemCost").value;
-    let itemCategory = document.getElementById("categories").value;
+    
+    // value of inputs
+    const budgetInput = document.getElementById("subtractBtn");
 
-    remainderVar -= itemCost;
-    budgetRemainderDisplay.innerText = `$${remainderVar}`;
+    let billSum = 0;
+    let foodSum = 0;
+    let clothingSum = 0;
+    let entertainmentSum = 0;
 
-    const billList = document.getElementById("billList");
-    const foodList = document.getElementById("foodList");
-    const clothingList = document.getElementById("clothingList");
-    const entertainmentList = document.getElementById("entertainmentList");
+    budgetInput.addEventListener("click", (event) => {
+      event.preventDefault();
 
-    let listItem = document.createElement("li");
-    listItem.innerText = `${itemName}: $${itemCost}`;
+      let itemName = document.getElementById("itemInput").value;
+      let itemCost = Number(document.getElementById("itemCost").value);
+      let itemCategory = document.getElementById("categories").value;
 
-    if (itemCategory === "bills") {
-      billList.appendChild(listItem);
-      let billsTotal = document.getElementById("billTotal");
+      remainderVar -= itemCost;
+      budgetRemainderDisplay.innerText = `$${remainderVar}`;
 
-      billSum += Number(itemCost);
-      billsTotal.innerText = `Weekly total: $${billSum}`;
-    } else if (itemCategory === "food") {
-      foodList.appendChild(listItem);
-      let foodTotal = document.getElementById("foodTotal");
+      const billList = document.getElementById("billList");
+      const foodList = document.getElementById("foodList");
+      const clothingList = document.getElementById("clothingList");
+      const entertainmentList = document.getElementById("entertainmentList");
 
-      foodSum += Number(itemCost);
-      foodTotal.innerText = `Weekly total: $${foodSum}`;
-    } else if (itemCategory === "clothing") {
-      clothingList.appendChild(listItem);
-      let clothingTotal = document.getElementById("clothingTotal");
+      let listItem = document.createElement("li");
+      listItem.innerText = `${itemName}: $${itemCost}`;
 
-      clothingSum += Number(itemCost);
-      clothingTotal.innerText = `Weekly total: $${clothingSum}`;
-    } else if (itemCategory === "entertainment") {
-      entertainmentList.appendChild(listItem);
-      let entertainmentTotal = document.getElementById("entertainmentTotal");
+      if (itemCategory === "bills") {
+        billList.appendChild(listItem);
+        let billsTotal = document.getElementById("billTotal");
 
-      entertainmentSum += Number(itemCost);
-      entertainmentTotal.innerText = `Weekly total: $${entertainmentSum}`;
-    }
+        billSum += Number(itemCost);
+        billsTotal.innerText = `Weekly total: $${billSum}`;
+      } else if (itemCategory === "food") {
+        foodList.appendChild(listItem);
+        let foodTotal = document.getElementById("foodTotal");
 
-    if (remainderVar < 0) {
+        foodSum += Number(itemCost);
+        foodTotal.innerText = `Weekly total: $${foodSum}`;
+      } else if (itemCategory === "clothing") {
+        clothingList.appendChild(listItem);
+        let clothingTotal = document.getElementById("clothingTotal");
+
+        clothingSum += Number(itemCost);
+        clothingTotal.innerText = `Weekly total: $${clothingSum}`;
+      } else if (itemCategory === "entertainment") {
+        entertainmentList.appendChild(listItem);
+        let entertainmentTotal = document.getElementById("entertainmentTotal");
+
+        entertainmentSum += Number(itemCost);
+        entertainmentTotal.innerText = `Weekly total: $${entertainmentSum}`;
+      }
+
+      if (remainderVar < 0) {
         alert("Warning! You have overspent your budget!");
         budgetRemainderDisplay.style.color = "red";
-    }
-  });
+      }
+    });
 
-  
+  });
+  let navBtn = document.getElementById("accessNav");
+  let nav = document.getElementById("nav");
+  navBtn.addEventListener("click", function (e) {
+    if (document.getElementById("nav").style.display === "none") {
+      document.getElementById("nav").style.display = "flex";
+    } else {
+      document.getElementById("nav").style.display = "none";
+    }
+    e.preventDefault();
+  });
 }
