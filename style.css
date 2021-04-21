@@ -41,7 +41,7 @@ nav {
   width: 40%;
   box-sizing: border-box;
   /* background-color:  rgba(55, 56, 56, 0.9); */
-  background-color:  rgba(23, 23, 23, 0.9);
+  background-color:  rgba(23, 23, 23, 1);
   border: 2px solid white;
   border-radius: 20px;
   padding: 20px;
@@ -143,6 +143,7 @@ nav {
 
 #formContainer {
   display: flex;
+  /* align-items: center; */
   justify-content: center;
   width: 100vw;
   min-width: 35%;
@@ -195,9 +196,10 @@ select {
 
 section {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin: 10px;
-  width: 90vw;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 div {
