@@ -2,8 +2,13 @@
 {
   const budgetTotalDisplay = document.getElementById("totalBudget");
   const budgetRemainderDisplay = document.getElementById("remaining");
-  let nav = document.getElementById('nav');
+  let nav = document.getElementById("nav");
   let newWeek = document.getElementById("newWeek");
+
+  let billSum = 0;
+  let foodSum = 0;
+  let clothingSum = 0;
+  let entertainmentSum = 0;
 
   newWeek.addEventListener("click", (event) => {
     nav.style.display = "none";
@@ -13,14 +18,8 @@
     // event.preventDefault();
     let remainderVar = totalBudget;
 
-    
     // value of inputs
     const budgetInput = document.getElementById("subtractBtn");
-
-    let billSum = 0;
-    let foodSum = 0;
-    let clothingSum = 0;
-    let entertainmentSum = 0;
 
     budgetInput.addEventListener("click", (event) => {
     //   event.preventDefault();
@@ -46,24 +45,30 @@
 
         billSum += Number(itemCost);
         billsTotal.innerText = `Weekly total: $${billSum.toFixed(2)}`;
+        updateChart();
       } else if (itemCategory === "food") {
         foodList.appendChild(listItem);
         let foodTotal = document.getElementById("foodTotal");
 
         foodSum += Number(itemCost);
         foodTotal.innerText = `Weekly total: $${foodSum.toFixed(2)}`;
+        updateChart();
       } else if (itemCategory === "clothing") {
         clothingList.appendChild(listItem);
         let clothingTotal = document.getElementById("clothingTotal");
 
         clothingSum += Number(itemCost);
         clothingTotal.innerText = `Weekly total: $${clothingSum.toFixed(2)}`;
+        updateChart();
       } else if (itemCategory === "entertainment") {
         entertainmentList.appendChild(listItem);
         let entertainmentTotal = document.getElementById("entertainmentTotal");
 
         entertainmentSum += Number(itemCost);
-        entertainmentTotal.innerText = `Weekly total: $${entertainmentSum.toFixed(2)}`;
+        entertainmentTotal.innerText = `Weekly total: $${entertainmentSum.toFixed(
+          2
+        )}`;
+        updateChart();
       }
 
       if (remainderVar < 0) {
@@ -71,8 +76,29 @@
         budgetRemainderDisplay.style.color = "red";
       }
     });
-
   });
+
+  function updateChart() {
+    var updateValues = [billSum, foodSum, clothingSum, entertainmentSum];
+    budgetChart.data.datasets[0].data = updateValues;
+    budgetChart.update();
+  }
+
+  var pieChart = document.getElementById("budgetPieCanvas");
+  var budgetChart = new Chart(pieChart, {
+    type: "doughnut",
+    data: {
+      labels: ["Bills", "Food", "Clothing", "Entertainment"],
+      datasets: [
+        {
+          label: "Weekly Spending",
+          data: [0, 0, 0, 0],
+          backgroundColor: ["red", "blue", "white", "purple"],
+        },
+      ],
+    },
+  });
+
   let navBtn = document.getElementById("accessNav");
   navBtn.addEventListener("click", function (e) {
     if (document.getElementById("nav").style.display === "none") {
