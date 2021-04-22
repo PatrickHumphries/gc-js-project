@@ -11,6 +11,7 @@
   let entertainmentSum = 0;
 
   newWeek.addEventListener("click", (event) => {
+    nav.style.display = "none";
     let totalBudget = Number(document.getElementById("budgetAmount").value);
     budgetTotalDisplay.innerText = `$${totalBudget}`;
     budgetRemainderDisplay.innerText = `$${totalBudget.toFixed(2)}`;
@@ -21,7 +22,7 @@
     const budgetInput = document.getElementById("subtractBtn");
 
     budgetInput.addEventListener("click", (event) => {
-      event.preventDefault();
+    //   event.preventDefault();
 
       let itemName = document.getElementById("itemInput").value;
       let itemCost = Number(document.getElementById("itemCost").value);
@@ -101,7 +102,7 @@
         },
       ],
     },
-    //legend font options
+    //chart options
     options: {
       plugins: {
         tooltip: {
@@ -129,4 +130,9 @@
     }
     e.preventDefault();
   });
+
+  let modeToggleBtn = document.getElementById("modeToggleBtn");
+  modeToggleBtn.addEventListener('click', (event) => {
+      document.body.classList.toggle('lightTheme');
+  })
 }
