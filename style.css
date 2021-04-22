@@ -5,6 +5,7 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 body {
@@ -99,14 +100,6 @@ nav {
   margin: 0 5px;
   padding: 0;
   width: 100%;
-}
-
-#pieChart {
-  background-color: rgb(1, 177, 177);
-  border-radius: 50%;
-  height: 150px;
-  width: 150px;
-  margin: 20px auto;
 }
 
 #newWeek {
@@ -253,9 +246,9 @@ li {
 }
 
 @media only screen and (max-width: 1200px) {
-    body {
-        padding: 0;
-    }
+  body {
+    padding: 0;
+  }
   section {
     display: flex;
     flex-direction: column;
@@ -275,10 +268,10 @@ li {
   #entertainment,
   #budgetForm,
   #inputForm {
-      width: 90%;
-      overflow-x: hidden;
+    width: 90%;
+    overflow-x: hidden;
   }
   #nav {
-      width: 60%;
+    width: 60%;
   }
 }
