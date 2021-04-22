@@ -94,7 +94,7 @@
       datasets: [
         {
           label: "Weekly Spending",
-          data: [2, 2, 2, 2],
+          data: [0, 0, 0, 0],
           backgroundColor: ["rgb(127, 255, 0,.6)", "rgb(105,105,105,.6)", "rgb(192,192,192,.6)", "rgb(255,255,255,.6)"],
           borderWidth: [0],
           borderColor: ["white"],
