@@ -93,10 +93,6 @@ input {
     height: 25px;
 }
 
-select {
-    height: 30px;
-}
-
 #p1 {
   color: var(--greenfont);
   font-size: 3em;
