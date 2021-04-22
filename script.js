@@ -76,13 +76,13 @@
       }
     });
   });
-
+// Updates chart
   function updateChart() {
     var updateValues = [billSum, foodSum, clothingSum, entertainmentSum];
     budgetChart.data.datasets[0].data = updateValues;
     budgetChart.update();
   }
-
+//chart build and options
   var pieChart = document.getElementById("budgetPieCanvas");
   var budgetChart = new Chart(pieChart, {
     type: "doughnut",
@@ -91,13 +91,35 @@
       datasets: [
         {
           label: "Weekly Spending",
-          data: [0, 0, 0, 0],
-          backgroundColor: ["red", "blue", "white", "purple"],
+          data: [2, 2, 2, 2],
+          backgroundColor: ["chartreuse", "rgb(105,105,105)", "chartreuse", "rgb(105,105,105)"],
+          borderWidth: [0],
+          borderColor: ["white"],
+          hoverOffset: [10],
+          hoverBorderWidth: [2],
+          hoverBorderColor: ["black"],
         },
       ],
     },
+    //legend font options
+    options: {
+      plugins: {
+        tooltip: {
+          backgroundColor: ["black"],
+          padding: [7],
+        },
+        legend: {
+          labels: {
+            color: "white",
+            font: {
+              size: 15,
+            }
+          }
+        }
+      }
+    },
   });
-
+//end of chart
   let navBtn = document.getElementById("accessNav");
   navBtn.addEventListener("click", function (e) {
     if (document.getElementById("nav").style.display === "none") {
