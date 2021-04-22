@@ -1,3 +1,30 @@
+:root {
+    --greenfont: chartreuse;
+    --bgcolor: rgba(26, 26, 26, 0.8);
+    --navBG:  rgba(23, 23, 23, 1);
+    --border: solid 2px white;
+    --h2text: white;
+    --numcolor: white;
+}
+
+.darkTheme {
+    --bgcolor: rgba(26, 26, 26, 0.8);
+    --greenfont: chartreuse;
+    --navBG:  rgba(23, 23, 23, 1);
+    --border: solid 2px white;
+    --h2text: white;
+    --numcolor: white;
+}
+
+.lightTheme {
+    --bgcolor: rgba(218, 218, 218, 1);
+    --greenfont: rgb(37, 95, 255);
+    --navBG:  rgb(173, 173, 173);
+    --border: solid 2px white;
+    --h2text: black;
+    --numcolor: black;
+}
+
 html {
   background: url("imgs/bgMtn.jpg");
   background-attachment: fixed;
@@ -31,12 +58,12 @@ header {
 
 h1 {
   font-size: 3em;
-  color: chartreuse;
-  background-color: rgba(26, 26, 26, 0.8);
+  color: var(--greenfont);
+  background-color: var(--bgcolor);
   width: 60%;
   text-align: center;
   border-radius: 20px;
-  border: 1px solid white;
+  border: var(--border);
 }
 
 nav {
@@ -46,16 +73,13 @@ nav {
   width: 40%;
   max-width: 360px;
   box-sizing: border-box;
-  /* background-color:  rgba(55, 56, 56, 0.9); */
-  background-color: rgba(23, 23, 23, 1);
-  border: 2px solid white;
+  background-color: var(--navBG);
+  border: var(--border);
   border-radius: 20px;
   padding: 20px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -110%);
-  /* top: 4%;
-  left: 23%; */
   position: absolute;
   z-index: 1;
 }
@@ -67,11 +91,11 @@ nav {
 #accessNav {
   margin: 20px;
   font-size: 2em;
-  color: chartreuse;
+  color: var(--greenfont);
 }
 
 #p1 {
-  color: chartreuse;
+  color: var(--greenfont);
   font-size: 2em;
 }
 
@@ -108,7 +132,7 @@ nav {
 
 #newWeek:hover,
 #darkMode:hover {
-  background-color: chartreuse;
+  background-color: var(--greenfont);
 }
 
 #expenses {
@@ -130,12 +154,12 @@ nav {
 #itemTag,
 #costTag,
 #expenses {
-  color: chartreuse;
+  color: var(--greenfont);
 }
 
 #totalBudget,
 #remaining {
-  color: white;
+  color: var(--numcolor);
   font-size: 3em;
 }
 
@@ -154,11 +178,11 @@ nav {
   max-width: 580px;
   height: 350px;
   margin: 10px;
-  background-color: rgba(26, 26, 26, 0.8);
+  background-color: var(--bgcolor);
   justify-content: center;
   align-items: center;
   border-radius: 20px;
-  border: 1px solid white;
+  border: var(--border);
 }
 
 #inputForm {
@@ -169,10 +193,10 @@ nav {
   max-width: 580px;
   height: 350px;
   margin: 10px;
-  background-color: rgba(26, 26, 26, 0.8);
+  background-color: var(--bgcolor);
   justify-content: center;
   border-radius: 20px;
-  border: 1px solid white;
+  border: var(--border);
 }
 
 #budgetForm label {
@@ -191,7 +215,7 @@ select {
 }
 
 #subtractBtn:hover {
-  background-color: chartreuse;
+  background-color: var(--greenfont);
 }
 
 section {
@@ -212,7 +236,7 @@ div {
 #food,
 #clothing,
 #entertainment {
-  border: 2px solid white;
+  border: var(--border);
   padding: 12px;
   border-radius: 20px;
   min-height: 300px;
@@ -227,8 +251,8 @@ div {
 }
 
 section div h2 {
-  color: white;
-  background-color: rgba(26, 26, 26, 0.8);
+  color: var(--h2text);
+  background-color: var(--bgcolor);
   margin: 0;
   border-radius: 10px;
   padding: 5px;
