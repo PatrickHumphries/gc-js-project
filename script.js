@@ -80,6 +80,8 @@
 // Updates chart
   function updateChart() {
     var updateValues = [billSum, foodSum, clothingSum, entertainmentSum];
+    var updateLables = ["Bills: $ " + billSum, "Food: $ " + foodSum, "Clothing: $ " + clothingSum, "Entertainment: $ " + entertainmentSum];
+    budgetChart.data.labels = updateLables;
     budgetChart.data.datasets[0].data = updateValues;
     budgetChart.update();
   }
@@ -88,17 +90,18 @@
   var budgetChart = new Chart(pieChart, {
     type: "doughnut",
     data: {
-      labels: ["Bills", "Food", "Clothing", "Entertainment"],
+      labels: ["Bills: $ " + billSum, "Food: $ " + foodSum, "Clothing: $ " + clothingSum, "Entertainment: $ " + entertainmentSum],
       datasets: [
         {
           label: "Weekly Spending",
           data: [2, 2, 2, 2],
-          backgroundColor: ["chartreuse", "rgb(105,105,105)", "chartreuse", "rgb(105,105,105)"],
+          backgroundColor: ["rgb(127, 255, 0,.6)", "rgb(105,105,105,.6)", "rgb(192,192,192,.6)", "rgb(255,255,255,.6)"],
           borderWidth: [0],
           borderColor: ["white"],
           hoverOffset: [7],
           hoverBorderWidth: [2],
           hoverBorderColor: ["black"],
+          
         },
       ],
     },
