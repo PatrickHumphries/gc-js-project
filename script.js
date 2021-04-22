@@ -134,5 +134,5 @@
   let modeToggleBtn = document.getElementById("modeToggleBtn");
   modeToggleBtn.addEventListener('click', (event) => {
       document.body.classList.toggle('lightTheme');
-  })
+  });
 }
