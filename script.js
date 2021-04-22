@@ -96,7 +96,7 @@
           backgroundColor: ["chartreuse", "rgb(105,105,105)", "chartreuse", "rgb(105,105,105)"],
           borderWidth: [0],
           borderColor: ["white"],
-          hoverOffset: [10],
+          hoverOffset: [7],
           hoverBorderWidth: [2],
           hoverBorderColor: ["black"],
         },
@@ -107,13 +107,17 @@
       plugins: {
         tooltip: {
           backgroundColor: ["black"],
-          padding: [7],
+          padding: [8],
+          displayColors: false,
+          bodyFont: {
+            size: 14,
+          }
         },
         legend: {
           labels: {
             color: "white",
             font: {
-              size: 15,
+              size: 16,
             }
           }
         }
