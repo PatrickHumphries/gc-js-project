@@ -21,9 +21,12 @@
     // value of inputs
     const budgetInput = document.getElementById("subtractBtn");
 
-    budgetInput.addEventListener("click", (event) => {
-    //   event.preventDefault();
+    let lowBudgetWarning = document.getElementById("warnings").value;
+    let warningNum = Number(lowBudgetWarning);
+    let percent = totalBudget * warningNum;
+    
 
+    budgetInput.addEventListener("click", (event) => {
       let itemName = document.getElementById("itemInput").value;
       let itemCost = Number(document.getElementById("itemCost").value);
       let itemCategory = document.getElementById("categories").value;
@@ -70,38 +73,59 @@
         )}`;
         updateChart();
       }
-
-      if (remainderVar < 0) {
-        alert("Warning! You have overspent your budget!");
-        budgetRemainderDisplay.style.color = "red";
+      function warningBot() {
+        if (remainderVar < 0) {
+          document.getElementById('zeroPopUp').style.display = 'flex';
+          budgetRemainderDisplay.style.color = "red";
+          document.getElementById("zeroText").innerText = "Warning! You have overspent your budget!"
+        } else if (remainderVar <= percent) {
+            document.getElementById('zeroPopUp').style.display = 'none';
+            document.getElementById('percentPopUp').style.display = 'flex';
+            document.getElementById("percentText").innerText = `Warning! You have ${warningNum * 100}% or less of your budget left!`;
+        }
       }
+      warningBot();
     });
   });
-// Updates chart
+  // Updates chart
   function updateChart() {
     var updateValues = [billSum, foodSum, clothingSum, entertainmentSum];
-    var updateLables = ["Bills: $ " + billSum, "Food: $ " + foodSum, "Clothing: $ " + clothingSum, "Entertainment: $ " + entertainmentSum];
+    var updateLables = [
+      "Bills: $ " + billSum,
+      "Food: $ " + foodSum,
+      "Clothing: $ " + clothingSum,
+      "Entertainment: $ " + entertainmentSum,
+    ];
     budgetChart.data.labels = updateLables;
     budgetChart.data.datasets[0].data = updateValues;
     budgetChart.update();
   }
-//chart build and options
+  //chart build and options
   var pieChart = document.getElementById("budgetPieCanvas");
   var budgetChart = new Chart(pieChart, {
     type: "doughnut",
     data: {
-      labels: ["Bills: $ " + billSum, "Food: $ " + foodSum, "Clothing: $ " + clothingSum, "Entertainment: $ " + entertainmentSum],
+      labels: [
+        "Bills: $ " + billSum,
+        "Food: $ " + foodSum,
+        "Clothing: $ " + clothingSum,
+        "Entertainment: $ " + entertainmentSum,
+      ],
       datasets: [
         {
           label: "Weekly Spending",
           data: [0, 0, 0, 0],
-          backgroundColor: ["rgb(127, 255, 0,.6)", "rgb(105,105,105,.6)", "rgb(192,192,192,.6)", "rgb(255,255,255,.6)"],
+          backgroundColor: [
+            "rgb(127, 255, 0,.6)",
+            "rgb(105,105,105,.6)",
+            "rgb(192,192,192,.6)",
+            "rgb(255,255,255,.6)",
+          ],
           borderWidth: [0],
           borderColor: ["white"],
           hoverOffset: [7],
           hoverBorderWidth: [2],
           hoverBorderColor: ["black"],
-          
         },
       ],
     },
@@ -114,20 +138,20 @@
           displayColors: false,
           bodyFont: {
             size: 14,
-          }
+          },
         },
         legend: {
           labels: {
             color: "white",
             font: {
               size: 16,
-            }
-          }
-        }
-      }
+            },
+          },
+        },
+      },
     },
   });
-//end of chart
+  //end of chart
   let navBtn = document.getElementById("accessNav");
   navBtn.addEventListener("click", function (e) {
     if (document.getElementById("nav").style.display === "none") {
@@ -139,7 +163,7 @@
   });
 
   let modeToggleBtn = document.getElementById("modeToggleBtn");
-  modeToggleBtn.addEventListener('click', (event) => {
-      document.body.classList.toggle('lightTheme');
+  modeToggleBtn.addEventListener("click", (event) => {
+    document.body.classList.toggle("lightTheme");
   });
 }

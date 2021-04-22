@@ -132,6 +132,33 @@ input {
   background-color: var(--greenfont);
 }
 
+.popups {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#percentPopUp, #zeroPopUp {
+    background-color: var(--navBG);
+    border: var(--settingsborder);
+    border-radius: 20px;
+    width: 80%;
+    max-width: 360px;
+    z-index: 2;
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 150%);
+    
+}
+
+#percentText, #zeroText {
+    color: red;
+    margin: 20px auto;
+}
+
 #expenses {
   font-size: 2em;
 }

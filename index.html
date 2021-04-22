@@ -28,20 +28,19 @@
             type="number"
             placeholder="Enter budget amount here"
             min="0"
-            maxlength="4"
           />
           <div id="btnContainer">
             <input id="modeToggleBtn" type="button" value="Dark / Light" />
             <select id="warnings" name="warning">
-              <option value="" disabled selected hidden>
+              <option class="warningValues" value="" disabled selected hidden>
                 Low budget warning (%)
               </option>
-              <option value="50">50%</option>
-              <option value="75">25%</option>
-              <option value="80">20%</option>
-              <option value="85">15%</option>
-              <option value="90">10%</option>
-              <option value="95">5%</option>
+              <option class="warningValues" value=".50">50%</option>
+              <option class="warningValues" value=".25">25%</option>
+              <option class="warningValues" value=".20">20%</option>
+              <option class="warningValues" value=".15">15%</option>
+              <option class="warningValues" value=".10">10%</option>
+              <option class="warningValues" value=".05">5%</option>
             </select>
           </div>
           <input id="newWeek" type="button" value="New Week" />
@@ -50,6 +49,14 @@
       <h1>Budget Buddy</h1>
     </header>
     <div class="bodyCon">
+        <div class="popups">
+            <div id="percentPopUp">
+              <p id="percentText">SAMPLE TEXT</p>
+            </div>
+            <div id="zeroPopUp">
+              <p id="zeroText">SAMPLE TEXT 2</p>
+            </div>
+        </div>
       <div id="formContainer">
         <form id="budgetForm" action="">
           <label id="budgetTag" for="budget">Budget: </label>
