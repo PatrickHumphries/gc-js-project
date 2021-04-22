@@ -1,28 +1,31 @@
 :root {
-    --greenfont: chartreuse;
-    --bgcolor: rgba(26, 26, 26, 0.8);
-    --navBG:  rgba(23, 23, 23, 1);
-    --border: solid 2px white;
-    --h2text: white;
-    --numcolor: white;
+  --greenfont: chartreuse;
+  --bgcolor: rgba(26, 26, 26, 0.8);
+  --navBG: rgba(23, 23, 23, 1);
+  --border: solid 2px white;
+  --h2text: white;
+  --numcolor: white;
+  --settingsborder: solid 2px white;
 }
 
-.darkTheme {
+/* .darkTheme {
     --bgcolor: rgba(26, 26, 26, 0.8);
     --greenfont: chartreuse;
     --navBG:  rgba(23, 23, 23, 1);
     --border: solid 2px white;
     --h2text: white;
     --numcolor: white;
-}
+    --settingsborder: 2px solid white;
+} */
 
 .lightTheme {
-    --bgcolor: rgba(218, 218, 218, 1);
-    --greenfont: rgb(37, 95, 255);
-    --navBG:  rgb(173, 173, 173);
-    --border: solid 2px white;
-    --h2text: black;
-    --numcolor: black;
+  --bgcolor: rgba(218, 218, 218, 1);
+  --greenfont: rgb(37, 95, 255);
+  --navBG: rgb(173, 173, 173);
+  --border: solid 2px white;
+  --h2text: black;
+  --numcolor: black;
+  --settingsborder: 2px solid black;
 }
 
 html {
@@ -32,11 +35,12 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   overflow-x: hidden;
-
 }
 
 body {
   font-family: Noto Sans KR;
+  margin: 0;
+  padding: 0;
 }
 
 .bodyCon {
@@ -74,7 +78,7 @@ nav {
   max-width: 360px;
   box-sizing: border-box;
   background-color: var(--navBG);
-  border: var(--border);
+  border: var(--settingsborder);
   border-radius: 20px;
   padding: 20px;
   top: 50%;
@@ -220,8 +224,9 @@ select {
 section {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 10px;
-  width: 100%;
+  width: 100vw;
   box-sizing: border-box;
 }
 
@@ -268,6 +273,12 @@ li {
   color: white;
 }
 
+#chartContainer {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media only screen and (max-width: 1200px) {
   body {
     padding: 0;
@@ -299,8 +310,10 @@ li {
   }
 }
 
-#chartContainer {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
+@media only screen and (max-width: 420px) {
+  nav {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
