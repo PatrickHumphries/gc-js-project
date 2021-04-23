@@ -76,6 +76,7 @@
       function warningBot() {
         if (remainderVar < 0) {
           document.getElementById('zeroPopUp').style.display = 'flex';
+          document.getElementById('percentPopUp').style.display = 'none';
           budgetRemainderDisplay.style.color = "red";
           document.getElementById("zeroText").innerText = "Warning! You have overspent your budget!"
         } else if (remainderVar <= percent) {
