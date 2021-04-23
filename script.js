@@ -91,13 +91,13 @@
   // Updates chart
   function updateChart() {
     var updateValues = [billSum, foodSum, clothingSum, entertainmentSum];
-    var updateLables = [
+/*     var updateLables = [
       "Bills: $ " + billSum,
       "Food: $ " + foodSum,
       "Clothing: $ " + clothingSum,
       "Entertainment: $ " + entertainmentSum,
     ];
-    budgetChart.data.labels = updateLables;
+    budgetChart.data.labels = updateLables; */
     budgetChart.data.datasets[0].data = updateValues;
     budgetChart.update();
   }
@@ -107,10 +107,10 @@
     type: "doughnut",
     data: {
       labels: [
-        "Bills: $ " + billSum,
-        "Food: $ " + foodSum,
-        "Clothing: $ " + clothingSum,
-        "Entertainment: $ " + entertainmentSum,
+        "Bills",
+        "Food",
+        "Clothing",
+        "Entertainment",
       ],
       datasets: [
         {
